@@ -9,7 +9,7 @@ for char in text :
     print(result, end = ' ')
 ```
 
-<u>#ord()</u>
+<u>#ord()</u> : 문자의 ASCII 코드를 반환해 준다
 
 
 
@@ -43,4 +43,6 @@ for t in range(T):
         print (f'#{t+1} -1')   
 ```
 
-<u>#slicing</u>
+**<u>#slicing</u>**
+
+리스트의 범위를 slicing한다. 리스트 L을 가정하고 L[a:c]라고 쓴다면 a번째 인덱스부터 c-1 인덱스까지 표시한다(c는 포함하지 않는다!).

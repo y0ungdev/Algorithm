@@ -1,6 +1,6 @@
 ### 07 / 30
 
-> 2070 큰 놈, 작은 놈, 같은 놈
+> 2070 큰 놈, 작은 놈, 같은 <u>놈</u>
 
 ```python
 T = int(input())
@@ -16,6 +16,10 @@ for t in range(1, T+1):
     print(f'#{t} {result}')
 ```
 
+<u>#f string interpolation</u>
+
+**<u>#.split()</u>**
+
 
 
 > 2071 평균값 구하기
@@ -29,6 +33,10 @@ for i in range(n) :
  
     print(f'#{i+1} {avg}')
 ```
+
+**<u>#map()</u>** : 인자 2개 필요함 ~~1개 넣어서 에러 났었음.~~
+
+ex) map(f, iterable) : 함수 f를 iterable한 자료형을 통해 수행한 결과를 묶어서 돌려준다
 
 
 
@@ -97,3 +105,4 @@ numbers.sort()
 print(numbers[int(n//2)])
 ```
 
+**#.sort()**
