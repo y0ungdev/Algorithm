@@ -1,7 +1,33 @@
+### 08 / 01
+
+> 2050 알파벳 숫자로 변환
+
+```python
+text = list(input())
+for char in text :
+    result = ord(char) - 64
+    print(result, end = ' ')
+```
+
+<u>#ord()</u>
 
 
-# 알파벳으로 이루어진 문자열을 입력 받아 각 알파벳을 1부터 26까지의 숫자로 변환하여 출력하라.
 
+> 2047 신문 헤드라인
+
+```python 
+string = str(input())
+result = string.upper()
+print(result)
+```
+
+<u>#.upper()</u>
+
+
+
+> 2056 연월일 달력
+
+```python 
 T = int(input())
 
 days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -15,4 +41,6 @@ for t in range(T):
         print (f'#{t+1} {result}')
     else:
         print (f'#{t+1} -1')   
-    
+```
+
+<u>#slicing</u>
