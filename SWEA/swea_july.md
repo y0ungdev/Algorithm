@@ -1,5 +1,39 @@
 ### 07 / 30
 
+> 2025 N줄 덧셈
+
+```python 
+n = int(input())
+n_sum = 0
+for i in range(1, n+1):    
+    n_sum += i
+print(n_sum)
+```
+
+
+
+> 1938 아주 간단한 계산기
+
+```python 
+a, b = map(int, input().split())
+
+print(a + b )
+
+if a > b :
+    print(a - b)
+else:
+    print(abs(b - a))
+
+print(a * b)
+
+if a > b :
+    print(a // b)
+else :
+    print (b // a)
+```
+
+
+
 > 2070 큰 놈, 작은 놈, 같은 <u>놈</u>
 
 ```python
