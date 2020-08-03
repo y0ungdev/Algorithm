@@ -1,8 +1,8 @@
 
 
 
-print("#++++")     
-print("+#+++")    
-print("++#++")    
-print("+++#+")    
-print("++++#")    
+T = int(input())
+
+
+N = int(input())
+

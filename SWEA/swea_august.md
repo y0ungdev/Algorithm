@@ -119,3 +119,24 @@ elif A < B :
     print("B")
 ```
 
+
+
+### 08 / 03
+
+> 1206 조망권
+
+````python 
+for t in range (1, 11):
+    n = int(input())
+    apt = list(map(int, input().split()))
+    cnt = 0
+
+    for i in range(2, n-2):
+        high = max(apt[i-2], apt[i-1], apt[i+1], apt[i+2])
+        if apt[i] - high >0 :
+            cnt += apt[i] - high
+    print(f'#{t} {cnt}')
+
+````
+
+*문제에 그림자료가 추가되면 알고리즘 도출할 때 좀 감을 못 잡는 것 같다
