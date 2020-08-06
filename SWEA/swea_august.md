@@ -158,3 +158,166 @@ for t in range (1, 11):
 
 
 
+### 08 / 07
+
+> 4836 색칠하기
+
+```python
+T= int(input())
+for t in range(1, T+1):
+    main_lst = [[0 for i in range(10)] for j in range(10)]
+    N = int(input())
+
+    res = 0
+
+    for i in range(N):
+        r1, c1, r2, c2, col = map(int, input().split())
+        for r in range(r1, r2 +1):
+            for c in range(c1, c2+1):
+                if col== 1:
+                    if main_lst[r][c] == 0:                     # W
+                        main_lst[r][c] = 1                      # W->R
+                    elif main_lst[r][c] == 2:
+                        main_lst[r][c] = 3
+                        res += 1
+                else :
+                    if main_lst[r][c] == 0:
+                        main_lst[r][c] = 2
+                    elif main_lst[r][c] == 1:
+                        main_lst[r][c] = 3
+                        res += 1
+
+
+    print(f'#{t} {res}')
+```
+
+
+
+> 4837 부분집합의 합
+
+```python
+# import sys
+# sys.stdin = open("input.txt", "r")
+
+
+set = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+li = []
+for i in range(1<< len(set)) :
+    subset = []
+    for j in range(len(set)):
+        if i & (1 << j) :
+            subset.append(set[j])
+    li.append(subset)
+
+T= int(input())
+for t in range(1, T + 1):
+    n, k = map(int, input().split())
+    res = 0
+
+    for z in li :
+        if len(z) == n and sum(z) == k :
+            res += 1
+
+    print(f'#{t} {res}')
+
+```
+
+
+
+> 4839 이진탐색
+
+```python
+
+# import sys
+# sys.stdin = open("input.txt", "r")
+
+T= int(input())
+for t in range(1, T+1):
+    P, Pa, Pb = map(int, input().split())
+    start = 1
+    end = P
+    A_cnt = 0
+    B_cnt = 0
+
+    while start <= end :
+        mid = int((start + end) // 2)
+        A_cnt += 1
+        if mid == Pa:
+            break
+        elif mid < Pa:
+            start = mid
+        else:
+            end = mid
+    start = 1
+    end = P
+    mid = int((start + end) // 2)
+
+    while start <= end :
+        mid = int((start + end) // 2)
+        B_cnt += 1
+        if mid == Pb:
+            break
+        elif mid < Pb:
+            start = mid
+        else:
+            end = mid
+
+    if A_cnt < B_cnt:
+        print(f'#{t} A')
+
+    elif A_cnt == B_cnt:
+        print(f'#{t} 0')
+    else:
+        print(f'#{t} B')
+
+```
+
+
+
+> 4843 특별한 정렬
+
+```python 
+# import sys
+# sys.stdin = open("input.txt", "r")
+
+T= int(input())
+for t in range(1, T+1):
+    n = int(input())
+
+    num_lst = list(map(int,input().split()))
+    num_lst.sort()
+    res_lst = []
+
+    i=0
+    j=len(num_lst)-1
+
+    while i<j:
+        res_lst.append(num_lst[j])
+        res_lst.append(num_lst[i])
+        i+=1
+        j-=1
+
+    result = ' '.join(map(str, res_lst[0:10]))
+
+    print(f'#{t} {result}')
+
+```
+
+
+
+> 2007 패턴 마디의 길이
+
+```python 
+for t in range(int(input())):
+    text = input()
+    res = 0
+    for i in range(1, 11):
+        m = text[0:i]
+        n = text[i:2*i]
+        if m==n:
+            res = i;
+            break
+    print(f'#{t+1} {res}')
+```
+
