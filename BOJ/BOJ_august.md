@@ -1,8 +1,4 @@
-
-
-
-
-### 10818.
+> 10818.
 
 ```python
 N = int(input())
@@ -11,9 +7,7 @@ numbers = list(map(int, input().split()))
 print(min(numbers), max(numbers))
 ```
 
-
-
-### 2562.
+> 2562.
 
 ```python
 nums_list = []
@@ -24,9 +18,7 @@ print(max(nums_list))
 print(nums_list.index(max(nums_list))+1)
 ```
 
-
-
-### 2577.
+> 2577.
 
 ```python
 A = int(input())
@@ -40,9 +32,7 @@ for i in range(0, 10):
     print(res.count(str(i)))
 ```
 
-
-
-### 3052.
+> 3052.
 
 ```python
 nums_res = []
@@ -52,4 +42,3 @@ for i in range(10):
 nums_res = set(nums_res)	# 같은 수들을 교집합으로 묶음
 print(len(nums_res))
 ```
-
