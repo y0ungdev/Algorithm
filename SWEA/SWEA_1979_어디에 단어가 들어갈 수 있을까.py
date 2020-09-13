@@ -1,25 +1,37 @@
 
 import sys
-sys.stain = open("1979.txt", "r")
+sys.stdin = open("1979.txt", "r")
 
 T = int(input())
 for tc in range(1, T+1):
     N, K = map(int, input().split())
     puzzle = [list(map(int, input().split())) for _ in range(N)]
+    res = 0
     # print(puzzle)
-    # 델타 이동 정의
-    dx = [-1,1,0,0]
-    dy = [0,0,-1,1]
-    # 시작점 설정
-    xS = yS = 0
-    blank = []
-    for i in range(4):
-        xNew = xS + dx[i]
-        yNew = yS + dy[i]
-        if 0 <= xNew < N and 0 <= yNew <N :
-            if puzzle[xNew][yNew] != 0 :
-                blank.append((xNew, yNew))
+    # 가로
+    for x in range(N):
+        sum = 0
+        for y in range(N):
+            if puzzle[x][y] == 1:
+                sum += 1
+                if sum == K:
+                    res += 1
+            else:
+                sum = 0
+            if sum > K :
+                res -= 1
+                sum = 0
+    # 세로
+    for x in range(N):
+        sum = 0
+        for y in range(N):
+            if puzzle[y][x] == 1 :
+                sum += 1
+                if sum == K :
+                    res += 1
             else :
-                break
-
-    print('#{} {}'.format(tc, len(blank)))
+                sum = 0
+            if sum > K :
+                res -= 1
+                sum = 0
+    print('#{} {}'.format(tc, res))
