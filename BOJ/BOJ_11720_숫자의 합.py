@@ -1,9 +1,10 @@
 
+#오잉 런타임 에러 뭐야
 
 N = int(input())
-for i in range(1, N+1):
+sums = 0
+for i in range(N):
     nums = list(map(int,input()))
-    sums= nums[0]
-    sums += i
-    i += 1
-    print(sum)
+    for num in nums:
+        sums += num
+    print(sums)
