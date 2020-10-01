@@ -2,12 +2,16 @@
 
 C = int(input())
 
-for cs in range(1, C+1):
-    N = list(map(int,input().split()))
-    sum = 0
-    for i in range(len(N)):
-        sum += i
-        i += 1
-        avg = "%0.3f" % round (sum / len(N)*100)
+for tc in range(C):
+    scores = list(map(int, input().split()))
+    avg = (sum(scores) - scores[0]) / (len(scores) - 1)
+    stdt_cnt = 0
+    for score in scores[1:]:
+        if score > avg:
+            stdt_cnt += 1
+    rat = (stdt_cnt / (len(scores) - 1))*100
+    print('{0:.3f}%'.format(rat))
 
-    print('{}%'.format(avg))
+
+
+
