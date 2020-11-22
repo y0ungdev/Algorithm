@@ -28,3 +28,9 @@ for i in range(1, N+1):
 # 내장함수 min(), max() 쓰기
 
 
+# N = int(input())
+#
+# numbers = list(map(int, input().split()))
+# print(min(numbers), max(numbers))
+
+
